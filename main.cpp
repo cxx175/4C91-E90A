@@ -3,6 +3,8 @@
 #include <string>
 
 // 全局变量定义
+
+//测试
 char packageName[256] = "com.tencent.tmgp.qlbt.cly";
 char gameName[256] = "器灵宝塔";
 char path[256] = "/data/user/0/%s/files/mod_fgcq/stab/scripts/";
