@@ -532,13 +532,13 @@ inline bool createDirectory(const char *dir) {
 inline char* getFileName(const char* path) {
 
 
-    char* lastSlash = strrchr(path, '/');
+    const char* lastSlash = strrchr(path, '/');
 
 
     if (lastSlash) {
 
 
-        return lastSlash + 1;
+        return (char*)lastSlash + 1;
 
 
     }
@@ -610,7 +610,7 @@ inline char* getParentDir(const char* path) {
     
 
 
-    char* lastSlash = strrchr(parent, '/');
+    const char* lastSlash = strrchr(parent, '/');
 
 
     if (lastSlash) {
@@ -853,7 +853,7 @@ inline void decrypt(char *name) {
 
 
 
-    char* lastSlash = strrchr(outputPath, '/');
+    const char* lastSlash = strrchr(outputPath, '/');
 
 
     if (lastSlash) {
@@ -1024,7 +1024,7 @@ inline bool copyFile(const char* src, const char* dst) {
     strcpy(parentDir, dst);
 
 
-    char* lastSlash = strrchr(parentDir, '/');
+    const char* lastSlash = strrchr(parentDir, '/');
 
 
     if (lastSlash) {
@@ -1321,7 +1321,7 @@ inline void encryptFile(const char* src, const char* dst) {
     strcpy(parentDir, dst);
 
 
-    char* lastSlash = strrchr(parentDir, '/');
+    const char* lastSlash = strrchr(parentDir, '/');
 
 
     if (lastSlash) {
@@ -1558,7 +1558,7 @@ inline void encryptLuaFiles(const char* srcDir, const char* dstDir) {
 
 
 
-            char* lastSlash = strrchr(dstPath, '/');
+            const char* lastSlash = strrchr(dstPath, '/');
 
 
             if (lastSlash) {
